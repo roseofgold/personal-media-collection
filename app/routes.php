@@ -23,4 +23,11 @@ return function (App $app) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
+
+    $app->group('movies', function (Group $group) {
+        $group->get('', ListMoviesAction::class);
+        $group->get('/{id}', ViewMovieAction::class);
+        $group->put('/{id}', UpdateMovieAction::class);
+        $group->post('', AddMovieAction::class);
+    });
 };
