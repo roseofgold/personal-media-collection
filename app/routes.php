@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+use App\Application\Actions\Movie\ListMoviesAction;
+use App\Application\Actions\Movie\ViewMovieAction;
 use App\Application\Actions\User\ListUsersAction;
 use App\Application\Actions\User\ViewUserAction;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -24,10 +26,10 @@ return function (App $app) {
         $group->get('/{id}', ViewUserAction::class);
     });
 
-    $app->group('movies', function (Group $group) {
+    $app->group('/movies', function (Group $group) {
         $group->get('', ListMoviesAction::class);
         $group->get('/{id}', ViewMovieAction::class);
-        $group->put('/{id}', UpdateMovieAction::class);
-        $group->post('', AddMovieAction::class);
+//        $group->put('/{id}', UpdateMovieAction::class);
+//        $group->post('', AddMovieAction::class);
     });
 };

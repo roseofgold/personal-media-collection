@@ -12,10 +12,10 @@ class ViewUserAction extends UserAction
      */
     protected function action(): Response
     {
-        $userId = (int) $this->resolveArg('id');
-        $user = $this->userRepository->findUserOfId($userId);
+        $user_id = (int) $this->resolveArg('id');
+        $user = $this->userRepository->findUserOfId($user_id);
 
-        $this->logger->info("User of id `${userId}` was viewed.");
+        $this->logger->info("User of id `${user_id}` was viewed.");
 
         return $this->respondWithData($user);
     }
