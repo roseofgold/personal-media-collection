@@ -15,9 +15,10 @@ class ViewMovieAction extends MovieAction
     protected function action(): Response
     {
         $movie_id = (int) $this->resolveArg('id');
-        $user = $this->movie_repository->getMovieById($movie_id);
+        $movie = $this->movie_repository->getMovieById($movie_id);
 
         $this->logger->info("Movie of id `${movie_id}` was viewed.");
 
-        return $this->respondWithData($user);    }
+        return $this->respondWithData($movie);
+    }
 }

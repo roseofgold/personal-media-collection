@@ -4,11 +4,9 @@
 namespace App\Infrastructure\Persistence\Movie;
 
 
-use App\Application\Actions\Movie\MovieAction;
 use App\Domain\Movie\Movie;
 use App\Domain\Movie\MovieNotFoundException;
 use App\Domain\Movie\MovieRepository;
-use phpDocumentor\Reflection\Types\This;
 
 class InMemoryMovieRepository implements MovieRepository
 {
@@ -24,7 +22,7 @@ class InMemoryMovieRepository implements MovieRepository
      */
     public function __construct(array $movies = null)
     {
-        $this->movies = $users ?? [
+        $this->movies = $movies ?? [
                 1 => new Movie(1, 'Resident Evil: Apocalypse', 'Some description'),
                 2 => new Movie(2, 'Young Guns', 'Some description'),
                 3 => new Movie(3, 'The Expendables', 'Some description'),
