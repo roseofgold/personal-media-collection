@@ -1,6 +1,7 @@
 # Personal Media Collection
 A personal media collection using Slim 4 Skeleton
-https://img.shields.io/travis/com/roseofgold/personal-media-collection?style=for-the-badge 
+
+[![Build Status](https://travis-ci.org/roseofgold/personal-media-collection.png?branch=main)](https://travis-ci.org/roseofgold/personal-media-collection)
 
 # Features
 
