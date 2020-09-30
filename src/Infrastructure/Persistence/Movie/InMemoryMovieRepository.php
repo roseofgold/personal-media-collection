@@ -22,7 +22,7 @@ class InMemoryMovieRepository implements MovieRepository
      *
      * @param array|null $movies
      */
-    public function __construct(array $users = null)
+    public function __construct(array $movies = null)
     {
         $this->movies = $users ?? [
                 1 => new Movie(1, 'Resident Evil: Apocalypse', 'Some description'),

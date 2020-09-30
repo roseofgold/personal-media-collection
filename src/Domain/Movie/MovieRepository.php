@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace App\Domain\Movie;
 
-use App\Application\Actions\Movie\MovieAction;
-
 interface MovieRepository
 {
     /**
@@ -14,7 +12,7 @@ interface MovieRepository
 
     /**
      * @param int $id
-     * @return MovieAction
+     * @return Movie
      * @throws MovieNotFoundException
      */
     public function getMovieById(int $id): Movie;
